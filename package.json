@@ -2,8 +2,7 @@
   "name": "vue-comparison",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "leo <dengdan99@gmail.com>",
-  "private": true,
+  "author": "leo99 <dengdan99@gmail.com>",
   "scripts": {
     "dev": "node build/dev-server.js",
     "example": "node build/build.js",
@@ -11,6 +10,11 @@
     "lint": "eslint --ext .js,.vue src",
     "release": "npm run lint && webpack --progress --hide-modules --config  ./build/webpack.release.js && webpack --progress --hide-modules --config  ./build/webpack.release.min.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dengdan99/vue-comparison"
+  },
+  "main": "dist/vue-color.min.js",
   "dependencies": {
     "vue": "^2.3.3"
   },

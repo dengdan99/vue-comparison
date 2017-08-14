@@ -1,21 +1,51 @@
 # vue-comparison
 
-> A Vue.js project
+> A Vue component
 
-## Build Setup
+> 类是汽车之家的车辆参数对比
 
-``` bash
-# install dependencies
-npm install
+## [Live demo](https://dengdan99.github.io/vue-comparison/example-dist/)
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Installation
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+### NPM
+```bash
+$ npm install vue-comparison
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### CommonJS
+```js
+var comparison = require('vue-comparison/src/Comparison.vue');
+
+new Vue({
+  components: {
+    'comparison': comparison
+  }
+})
+```
+
+### ES6
+```js
+import { Comparison } from 'vue-comparison'
+
+new Vue({
+  components: {
+    Comparison
+  }
+})
+```
+### 
+```html
+<comparison
+  :data = "mockData"
+  :contrast = "contrast"
+  :props = "compProps"
+  @add-item = "addItemHander"
+  >
+    <div slot="symbol">
+      <span class="tp-icon">- 无</span>
+      <span class="tp-icon">* 选配</span>
+      <span class="tp-icon">+ 标配</span>
+    </div>
+  </comparison>
+```
